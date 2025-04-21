@@ -5,17 +5,16 @@ int main() {
     char filename[100];
     int _choice = 0;
     char option;
-
     printf("Please enter the name of the file and format (e.g. filename.txt): ");
-    scanf("%s", filename);
+    scanf(" %s", filename);
     do {
         printf("Do you want to continue (y/n)?: ");
         getchar();
-        scanf("%c", &option);
+        scanf(" %c", &option);
         switch (option) {
             case 'y':
                 printf("Please enter the type of search: (1-C:, 2-D:, 3-another, 4-full): ");
-                scanf("%d", &_choice);
+                scanf(" %d", &_choice);
                 switch (_choice) {
                     case 1:
                         Search_Disk_C(filename);
